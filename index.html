@@ -42,13 +42,13 @@
     <div class="note__panel">
         <h2 class="note__panel-heading">Dodaj notatkę</h2>
         <label for="category">Wybierz kategorię:</label>
-        <select id="category">
+        <select id="category" onchange="selectValue()">
             <option value="0" disabled selected>- Wybierz kategorie -</option>
             <option value="1">Zakupy</option>
             <option value="1">Praca</option>
             <option value="1">Inne</option>
         </select>
-        <label for="text">Wpisz treść notatki: </label>
+        <label for="text">Wpisz treść notatki:</label>
         <textarea id="text"></textarea>
         <p class="note__panel-error">Uzupełnij wszystkie pola!</p>
         <div class="note__panel-buttons">

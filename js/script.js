@@ -33,18 +33,17 @@ const closePanel = () => {
 }
 
 const addNote = () => {
+	error.style.visibility = 'visible'
+
 	if ((categoryPanel.value == 0) & (textPanel.value == '')) {
-		error.style.visibility = 'visible'
 		error.textContent = 'Wypełnij brakujące pola!'
 	} else if (categoryPanel.value == 0) {
-		error.style.visibility = 'visible'
 		error.textContent = 'Wybierz kategorię!'
 	} else if (textPanel.value == '') {
-		error.style.visibility = 'visible'
 		error.textContent = 'Podaj treść notatki!'
 	} else {
 		createNote()
-		error.style.visibility = 'hidden'
+		closePanel()
 	}
 }
 
@@ -54,10 +53,8 @@ const createNote = () => {
 	newNote.setAttribute('id', cardID)
 	noteArea.append(newNote)
 	newNote.innerHTML = `
-    <div class="note-area__header">
-                <h3 class="note-area__header-title">${
-									categoryPanel.options[categoryPanel.selectedIndex].text
-								} #${cardID}</h3>
+            <div class="note-area__header">
+                <h3 class="note-area__header-title">${selectedValue} #${cardID}</h3>
                 <button class="note-area__header-delete">
                     <i class="fas fa-times icon"></i>
                 </button>
@@ -66,6 +63,10 @@ const createNote = () => {
                 <p>${textPanel.value}</p>
             </div>`
 	cardID++
+}
+
+const selectValue = () => {
+	selectedValue = categoryPanel.options[categoryPanel.selectedIndex].text
 }
 
 addBtn.addEventListener('click', openPanel)
