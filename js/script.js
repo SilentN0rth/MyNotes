@@ -63,10 +63,25 @@ const createNote = () => {
                 <p>${textPanel.value}</p>
             </div>`
 	cardID++
+	checkColor(newNote)
 }
 
 const selectValue = () => {
 	selectedValue = categoryPanel.options[categoryPanel.selectedIndex].text
+}
+
+const checkColor = note => {
+	switch (selectedValue) {
+		case 'Zakupy':
+			note.style.backgroundColor = 'rgb(72,255,0)'
+			break
+		case 'Praca':
+			note.style.backgroundColor = 'rgb(255,243,0)'
+			break
+		case 'Inne':
+			note.style.backgroundColor = 'rgb(0,170,255)'
+			break
+	}
 }
 
 addBtn.addEventListener('click', openPanel)
