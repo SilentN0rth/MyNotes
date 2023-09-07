@@ -92,6 +92,7 @@ body .note__panel-heading {
 }
 body .note__panel label {
   margin-bottom: 10px;
+  font-size: 1.4rem;
 }
 body .note__panel #text,
 body .note__panel #category {
@@ -108,7 +109,8 @@ body .note__panel #text {
   font-size: 1.4rem;
 }
 body .note__panel-error {
+  font-size: 1.6rem;
   margin-bottom: 20px;
-  color: red;
+  color: tomato;
   visibility: hidden;
 }/*# sourceMappingURL=style.css.map */

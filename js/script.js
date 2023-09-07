@@ -32,5 +32,42 @@ const closePanel = () => {
 	category.selectedIndex = 0
 }
 
+const addNote = () => {
+	if ((categoryPanel.value == 0) & (textPanel.value == '')) {
+		error.style.visibility = 'visible'
+		error.textContent = 'Wypełnij brakujące pola!'
+	} else if (categoryPanel.value == 0) {
+		error.style.visibility = 'visible'
+		error.textContent = 'Wybierz kategorię!'
+	} else if (textPanel.value == '') {
+		error.style.visibility = 'visible'
+		error.textContent = 'Podaj treść notatki!'
+	} else {
+		createNote()
+		error.style.visibility = 'hidden'
+	}
+}
+
+const createNote = () => {
+	const newNote = document.createElement('div')
+	newNote.classList.add('note-area__note')
+	newNote.setAttribute('id', cardID)
+	noteArea.append(newNote)
+	newNote.innerHTML = `
+    <div class="note-area__header">
+                <h3 class="note-area__header-title">${
+									categoryPanel.options[categoryPanel.selectedIndex].text
+								} #${cardID}</h3>
+                <button class="note-area__header-delete">
+                    <i class="fas fa-times icon"></i>
+                </button>
+            </div>
+            <div class="note-area__body">
+                <p>${textPanel.value}</p>
+            </div>`
+	cardID++
+}
+
 addBtn.addEventListener('click', openPanel)
 cancelBtn.addEventListener('click', openPanel)
+saveBtn.addEventListener('click', addNote)

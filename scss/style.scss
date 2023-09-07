@@ -98,6 +98,7 @@ body {
 			}
 			label {
 				margin-bottom: 10px;
+				font-size: 1.4rem;
 			}
 
 			#text,
@@ -116,8 +117,9 @@ body {
 				font-size: 1.4rem;
 			}
 			&-error {
+				font-size: 1.6rem;
 				margin-bottom: 20px;
-				color: red;
+				color: tomato;
 				visibility: hidden;
 			}
 		}
