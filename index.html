@@ -18,14 +18,14 @@
     <div class="menu">
         <h1><i class="fas fa-sticky-note"></i> MyNotes</h1>
         <div class="menu__buttons">
-            <button class="menu__buttons-add icon"><i class="fas fa-plus"></i> Dodaj</button>
-            <button class="menu__buttons-delete icon"><i class="fas fa-trash-alt"></i> Usuń wszystkie</button>
+            <button class="btn menu__buttons-add icon"><i class="fas fa-plus"></i> Dodaj</button>
+            <button class="btn menu__buttons-delete icon"><i class="fas fa-trash-alt"></i> Usuń wszystkie</button>
         </div>
     </div>
     <div class="note-area">
         <div class="note-area__note">
             <div class="note-area__header">
-                <h3 class="note-area__header-title">Notatka 1</h3>
+                <h3 class="note-area__header-title">Notatka #1</h3>
                 <button class="note-area__header-delete">
                     <i class="fas fa-times icon"></i>
                 </button>
@@ -34,6 +34,18 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat ipsum suscipit magnam accusantium
                     quaerat odio cumque commodi consequatur repellendus fugiat, culpa asperiores assumenda modi
                     perferendis vitae itaque officiis animi quos.</p>
+            </div>
+        </div>
+        <div class="note-area__note">
+            <div class="note-area__header">
+                <h3 class="note-area__header-title">Notatka #2</h3>
+                <button class="note-area__header-delete">
+                    <i class="fas fa-times icon"></i>
+                </button>
+            </div>
+            <div class="note-area__body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, facere! Nisi maxime distinctio
+                    soluta eaque aperiam doloribus in quam exercitationem?</p>
             </div>
         </div>
     </div>
@@ -49,10 +61,10 @@
         </select>
         <label for="text">Wpisz treść notatki: </label>
         <textarea id="text"></textarea>
-        <p class="error">Uzupełnij wszystkie pola!</p>
+        <p class="note__panel-error">Uzupełnij wszystkie pola!</p>
         <div class="note__panel-buttons">
-            <button class="save icon"><i class="fas fa-save"></i> Zapisz</button>
-            <button class="cancel icon"><i class="far fa-window-close"></i> Anuluj</button>
+            <button class="btn save icon"><i class="fas fa-save"></i> Zapisz</button>
+            <button class="btn cancel icon"><i class="far fa-window-close"></i> Anuluj</button>
         </div>
     </div>
 
