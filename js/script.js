@@ -36,11 +36,11 @@ const addNote = () => {
 	error.style.visibility = 'visible'
 
 	if ((categoryPanel.value == 0) & (textPanel.value == '')) {
-		error.textContent = 'Wypełnij brakujące pola!'
+		error.textContent = 'Fill the missing fields!'
 	} else if (categoryPanel.value == 0) {
-		error.textContent = 'Wybierz kategorię!'
+		error.textContent = 'Choose a category!'
 	} else if (textPanel.value == '') {
-		error.textContent = 'Podaj treść notatki!'
+		error.textContent = 'Enter the content of the note!'
 	} else {
 		createNote()
 		closePanel()
@@ -72,13 +72,13 @@ const selectValue = () => {
 
 const checkColor = note => {
 	switch (selectedValue) {
-		case 'Zakupy':
+		case 'Shopping':
 			note.style.backgroundColor = 'rgb(72,255,0)'
 			break
-		case 'Praca':
+		case 'Work':
 			note.style.backgroundColor = 'rgb(255,243,0)'
 			break
-		case 'Inne':
+		case 'Other':
 			note.style.backgroundColor = 'rgb(0,170,255)'
 			break
 	}
